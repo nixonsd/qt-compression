@@ -47,7 +47,36 @@ target_include_directories(qt-compression PRIVATE ${INCLUDE_DIR})
 target_include_directories(qt-compression PRIVATE ${SOURCE_DIR})
 
 #===================== LINKING LIBRARIES =======================#
+target_link_libraries(qt-compression Qt5::Core)
 target_link_libraries(qt-compression Qt5::OpenGL)
 target_link_libraries(qt-compression Qt5::Xml)
 target_link_libraries(qt-compression Qt5::Widgets)
 target_link_libraries(qt-compression ${QT_LIBRARIES} ${OPENGL_LIBRARIES})
+
+include(InstallRequiredSystemLibraries)
+
+install(
+    TARGETS qt-compression 
+    RUNTIME DESTINATION "."
+    CONFIGURATIONS ${CMAKE_CONFIGURATION_TYPES}
+)
+
+install (FILES
+    $<TARGET_FILE:Qt5::Widgets>
+    $<TARGET_FILE:Qt5::Core>
+    $<TARGET_FILE:Qt5::Gui>
+    DESTINATION "."
+)
+
+install (FILES
+    ${CMAKE_PREFIX_PATH}/plugins/styles/qwindowsvistastyle.dll
+    DESTINATION "styles"
+)
+
+install (FILES
+    ${CMAKE_PREFIX_PATH}/plugins/platforms/qwindows.dll
+    ${CMAKE_PREFIX_PATH}/plugins/platforms/qminimal.dll
+    ${CMAKE_PREFIX_PATH}/plugins/platforms/qdirect2d.dll
+    ${CMAKE_PREFIX_PATH}/plugins/platforms/qoffscreen.dll
+    DESTINATION "platforms"
+)
