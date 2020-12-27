@@ -130,6 +130,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E remove_directory C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt
+if %errorlevel% neq 0 goto :cmEnd
+set PATH="C:/Qt/5.15.0/msvc2019/bin"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\5.15.0\msvc2019\bin\windeployqt.exe --dir C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt --verbose 0 --no-compiler-runtime --no-translations --no-angle --release --no-opengl-sw C:/Users/banda/Documents/Работа/qt-compression/bin/Debug/qt-compression.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
       <AdditionalDependencies>C:\Qt\5.15.0\msvc2019\lib\Qt5OpenGLd.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Xmld.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Widgetsd.lib;opengl32.lib;glu32.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Guid.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Cored.lib;C:\Qt\5.15.0\msvc2019\lib\qtmaind.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -190,6 +206,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E remove_directory C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt
+if %errorlevel% neq 0 goto :cmEnd
+set PATH="C:/Qt/5.15.0/msvc2019/bin"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\5.15.0\msvc2019\bin\windeployqt.exe --dir C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt --verbose 0 --no-compiler-runtime --no-translations --no-angle --release --no-opengl-sw C:/Users/banda/Documents/Работа/qt-compression/bin/Release/qt-compression.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
       <AdditionalDependencies>C:\Qt\5.15.0\msvc2019\lib\Qt5OpenGL.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Xml.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Widgets.lib;opengl32.lib;glu32.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Gui.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Core.lib;C:\Qt\5.15.0\msvc2019\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -250,6 +282,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E remove_directory C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt
+if %errorlevel% neq 0 goto :cmEnd
+set PATH="C:/Qt/5.15.0/msvc2019/bin"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\5.15.0\msvc2019\bin\windeployqt.exe --dir C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt --verbose 0 --no-compiler-runtime --no-translations --no-angle --release --no-opengl-sw C:/Users/banda/Documents/Работа/qt-compression/bin/MinSizeRel/qt-compression.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
       <AdditionalDependencies>C:\Qt\5.15.0\msvc2019\lib\Qt5OpenGL.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Xml.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Widgets.lib;opengl32.lib;glu32.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Gui.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Core.lib;C:\Qt\5.15.0\msvc2019\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -309,6 +357,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E remove_directory C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt
+if %errorlevel% neq 0 goto :cmEnd
+set PATH="C:/Qt/5.15.0/msvc2019/bin"
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\5.15.0\msvc2019\bin\windeployqt.exe --dir C:/Users/banda/Documents/Работа/qt-compression/build32/windeployqt --verbose 0 --no-compiler-runtime --no-translations --no-angle --release --no-opengl-sw C:/Users/banda/Documents/Работа/qt-compression/bin/RelWithDebInfo/qt-compression.exe
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
       <AdditionalDependencies>C:\Qt\5.15.0\msvc2019\lib\Qt5OpenGL.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Xml.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Widgets.lib;opengl32.lib;glu32.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Gui.lib;C:\Qt\5.15.0\msvc2019\lib\Qt5Core.lib;C:\Qt\5.15.0\msvc2019\lib\qtmain.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

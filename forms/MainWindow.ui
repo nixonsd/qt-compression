@@ -46,6 +46,14 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton#pushButton {
+	color: black;
+	background: white;
+	border: 1px solid grey;
+	height: 20px;
+}</string>
+  </property>
   <property name="animated">
    <bool>false</bool>
   </property>
@@ -81,12 +89,15 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>Click Me</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
+    <item row="4" column="0">
      <widget class="QCheckBox" name="checkBox">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">

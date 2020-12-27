@@ -12,11 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,42 +24,73 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QGridLayout *gridLayout;
+    QProgressBar *progressBar;
     QPushButton *pushButton;
     QCheckBox *checkBox;
-    QProgressBar *progressBar;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->setWindowModality(Qt::ApplicationModal);
-        MainWindow->resize(400, 300);
-        MainWindow->setTabletTracking(true);
+        MainWindow->setWindowModality(Qt::WindowModal);
+        MainWindow->resize(400, 68);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(400, 68));
+        MainWindow->setMaximumSize(QSize(400, 68));
+        MainWindow->setTabletTracking(false);
+        MainWindow->setContextMenuPolicy(Qt::CustomContextMenu);
+        MainWindow->setLayoutDirection(Qt::LeftToRight);
+        MainWindow->setAutoFillBackground(false);
+        MainWindow->setStyleSheet(QString::fromUtf8("QPushButton#pushButton {\n"
+"	color: black;\n"
+"	background: white;\n"
+"	border: 1px solid grey;\n"
+"	height: 20px;\n"
+"}"));
+        MainWindow->setAnimated(false);
+        MainWindow->setDockNestingEnabled(false);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(140, 170, 131, 41));
-        pushButton->setTabletTracking(true);
-        checkBox = new QCheckBox(centralwidget);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
-        checkBox->setGeometry(QRect(140, 130, 70, 17));
-        checkBox->setTabletTracking(true);
+        centralwidget->setLayoutDirection(Qt::LeftToRight);
+        centralwidget->setAutoFillBackground(true);
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         progressBar = new QProgressBar(centralwidget);
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
-        progressBar->setGeometry(QRect(60, 70, 311, 23));
-        progressBar->setTabletTracking(true);
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(progressBar->sizePolicy().hasHeightForWidth());
+        progressBar->setSizePolicy(sizePolicy1);
         progressBar->setValue(24);
+
+        gridLayout->addWidget(progressBar, 1, 0, 1, 2);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy1);
+        pushButton->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout->addWidget(pushButton, 2, 1, 3, 1);
+
+        checkBox = new QCheckBox(centralwidget);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        QSizePolicy sizePolicy2(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(checkBox->sizePolicy().hasHeightForWidth());
+        checkBox->setSizePolicy(sizePolicy2);
+        checkBox->setAutoFillBackground(false);
+
+        gridLayout->addWidget(checkBox, 4, 0, 1, 1);
+
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 400, 21));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
@@ -70,9 +100,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "CD", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Press Button", nullptr));
-        checkBox->setText(QCoreApplication::translate("MainWindow", "CheckBox", nullptr));
-        progressBar->setFormat(QCoreApplication::translate("MainWindow", "%p%", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Click Me", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "Option", nullptr));
     } // retranslateUi
 
 };

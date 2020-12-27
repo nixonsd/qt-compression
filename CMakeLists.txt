@@ -53,30 +53,33 @@ target_link_libraries(qt-compression Qt5::Xml)
 target_link_libraries(qt-compression Qt5::Widgets)
 target_link_libraries(qt-compression ${QT_LIBRARIES} ${OPENGL_LIBRARIES})
 
+# Retrieve the absolute path to qmake and then use that path to find
+# the binaries
+get_target_property(_qmake_executable Qt5::qmake IMPORTED_LOCATION)
+get_filename_component(_qt_bin_dir "${_qmake_executable}" DIRECTORY)
+find_program(WINDEPLOYQT_EXECUTABLE windeployqt HINTS ${CMAKE_PREFIX_PATH}/bin)
+
+add_custom_command(TARGET qt-compression
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_CURRENT_BINARY_DIR}/windeployqt"
+		COMMAND set PATH="${_qt_bin_dir}"
+        COMMAND "${WINDEPLOYQT_EXECUTABLE}" --dir "${CMAKE_CURRENT_BINARY_DIR}/windeployqt" --verbose 0 --no-compiler-runtime --no-translations --no-angle --release --no-opengl-sw "$<TARGET_FILE:qt-compression>"
+    )
+
+	# copy deployment directory during installation
+    install(
+        DIRECTORY
+        "${CMAKE_CURRENT_BINARY_DIR}/windeployqt/"
+        DESTINATION "."
+    )
+
+set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
 include(InstallRequiredSystemLibraries)
+
+install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/Release/" DESTINATION ".")
 
 install(
     TARGETS qt-compression 
     RUNTIME DESTINATION "."
     CONFIGURATIONS ${CMAKE_CONFIGURATION_TYPES}
-)
-
-install (FILES
-    $<TARGET_FILE:Qt5::Widgets>
-    $<TARGET_FILE:Qt5::Core>
-    $<TARGET_FILE:Qt5::Gui>
-    DESTINATION "."
-)
-
-install (FILES
-    ${CMAKE_PREFIX_PATH}/plugins/styles/qwindowsvistastyle.dll
-    DESTINATION "styles"
-)
-
-install (FILES
-    ${CMAKE_PREFIX_PATH}/plugins/platforms/qwindows.dll
-    ${CMAKE_PREFIX_PATH}/plugins/platforms/qminimal.dll
-    ${CMAKE_PREFIX_PATH}/plugins/platforms/qdirect2d.dll
-    ${CMAKE_PREFIX_PATH}/plugins/platforms/qoffscreen.dll
-    DESTINATION "platforms"
 )

@@ -46,6 +46,12 @@ public:
         MainWindow->setContextMenuPolicy(Qt::CustomContextMenu);
         MainWindow->setLayoutDirection(Qt::LeftToRight);
         MainWindow->setAutoFillBackground(false);
+        MainWindow->setStyleSheet(QString::fromUtf8("QPushButton#pushButton {\n"
+"	color: black;\n"
+"	background: white;\n"
+"	border: 1px solid grey;\n"
+"	height: 20px;\n"
+"}"));
         MainWindow->setAnimated(false);
         MainWindow->setDockNestingEnabled(false);
         centralwidget = new QWidget(MainWindow);
@@ -69,6 +75,7 @@ public:
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy1);
+        pushButton->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout->addWidget(pushButton, 2, 1, 3, 1);
 
@@ -81,7 +88,7 @@ public:
         checkBox->setSizePolicy(sizePolicy2);
         checkBox->setAutoFillBackground(false);
 
-        gridLayout->addWidget(checkBox, 3, 0, 1, 1);
+        gridLayout->addWidget(checkBox, 4, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
 
