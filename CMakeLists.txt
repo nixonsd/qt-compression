@@ -22,6 +22,7 @@ find_package(Qt5Widgets REQUIRED)
 set(FORMS_DIR "${CMAKE_SOURCE_DIR}/forms")
 set(INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
 set(SOURCE_DIR "${CMAKE_SOURCE_DIR}/src")
+set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/resources/qt-compression.rc")
 
 include_directories(${FORMS_DIR})
 include_directories(${INCLUDE_DIR})
@@ -36,9 +37,9 @@ file(GLOB_RECURSE SOURCES
 set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_AUTOUIC_SEARCH_PATHS} ${FORMS_DIR})
 
 if (WIN32)
-	add_executable(qt-compression WIN32 ${SOURCES})
+	add_executable(qt-compression WIN32 ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS}) # ${APP_ICON_RESOURCE_WINDOWS}
 elseif(UNIX)
-	add_executable(qt-compression ${SOURCES})
+	add_executable(qt-compression ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
 endif()
 
 # Add the target includes

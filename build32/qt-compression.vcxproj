@@ -449,6 +449,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\MainWindow.cpp" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\main.cpp" />
+    <ResourceCompile Include="C:\Users\banda\Documents\Работа\qt-compression\resources\qt-compression.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\banda\Documents\Работа\qt-compression\build32\ZERO_CHECK.vcxproj">

@@ -23,6 +23,11 @@
     <None Include="C:\Users\banda\Documents\Работа\qt-compression\forms\MainWindow.ui" />
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="C:\Users\banda\Documents\Работа\qt-compression\resources\qt-compression.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Header Files">
       <UniqueIdentifier>{827F6AF5-0C4B-336A-A53B-B95F4209F387}</UniqueIdentifier>
     </Filter>
