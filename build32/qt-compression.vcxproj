@@ -447,6 +447,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\build32\qt-compression_autogen\mocs_compilation.cpp" />
     <None Include="C:\Users\banda\Documents\Работа\qt-compression\forms\MainWindow.ui" />
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h" />
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\resource.h" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\MainWindow.cpp" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\main.cpp" />
     <ResourceCompile Include="C:\Users\banda\Documents\Работа\qt-compression\resources\qt-compression.rc" />

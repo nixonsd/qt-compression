@@ -15,6 +15,9 @@
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\banda\Documents\Работа\qt-compression\CMakeLists.txt" />

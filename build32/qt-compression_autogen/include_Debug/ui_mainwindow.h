@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>
@@ -44,6 +45,9 @@ public:
         MainWindow->setMaximumSize(QSize(400, 68));
         MainWindow->setTabletTracking(false);
         MainWindow->setContextMenuPolicy(Qt::CustomContextMenu);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("../resources/icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         MainWindow->setLayoutDirection(Qt::LeftToRight);
         MainWindow->setAutoFillBackground(false);
         MainWindow->setStyleSheet(QString::fromUtf8("QPushButton#pushButton {\n"

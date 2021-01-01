@@ -22,7 +22,14 @@ find_package(Qt5Widgets REQUIRED)
 set(FORMS_DIR "${CMAKE_SOURCE_DIR}/forms")
 set(INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include")
 set(SOURCE_DIR "${CMAKE_SOURCE_DIR}/src")
-set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/resources/qt-compression.rc")
+set(RESOURCES_DIR "${CMAKE_SOURCE_DIR}/resources")
+
+# Configuration of the Application Icon
+set(APP_ICON_RESOURCE_WINDOWS ${CMAKE_CURRENT_SOURCE_DIR}/resources/qt-compression.rc)
+
+set_property(SOURCE qt-compression APPEND PROPERTY
+    OBJECT_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/resources/icon.ico
+)
 
 include_directories(${FORMS_DIR})
 include_directories(${INCLUDE_DIR})
@@ -78,6 +85,11 @@ set(CMAKE_INSTALL_UCRT_LIBRARIES TRUE)
 include(InstallRequiredSystemLibraries)
 
 install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/Release/" DESTINATION ".")
+
+install(FILES
+    ${RESOURCES_DIR}/icon.ico
+    DESTINATION "."
+)
 
 install(
     TARGETS qt-compression 
