@@ -1,23 +1,22 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "MainWindow.h"
+#include "ui_MainWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QObject::connect(ui->pushButton, &QPushButton::clicked,
+    QObject::connect(ui->executeButton, &QPushButton::clicked,
         this, &MainWindow::onButtonClick);
 }
 
 void MainWindow::onButtonClick()
 {
-    bool checkBoxStatus = ui->checkBox->checkState();
+    bool statisticsBoxStatus = ui->statisticsBox->checkState();
 
     QMessageBox msgB;
-    msgB.information(this, "CheckBox Status", (checkBoxStatus) ? "True" : "False", QMessageBox::Ok);
-
-    ui->progressBar->setValue(80);
+    msgB.information(this, "CheckBox Status", (statisticsBoxStatus) ? "True" : "False", QMessageBox::Ok);
+    ui->progressBar->setValue((statisticsBoxStatus) ? 100 : 0);
 }
 
 MainWindow::~MainWindow()

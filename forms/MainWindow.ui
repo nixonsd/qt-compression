@@ -2,116 +2,206 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="windowModality">
-   <enum>Qt::WindowModal</enum>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>68</height>
+    <width>451</width>
+    <height>200</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
-    <width>400</width>
-    <height>68</height>
+    <width>0</width>
+    <height>200</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>400</width>
-    <height>68</height>
+    <width>16777215</width>
+    <height>200</height>
    </size>
-  </property>
-  <property name="tabletTracking">
-   <bool>false</bool>
-  </property>
-  <property name="contextMenuPolicy">
-   <enum>Qt::CustomContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>CD</string>
   </property>
-  <property name="layoutDirection">
-   <enum>Qt::LeftToRight</enum>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
-  </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton#pushButton {
-	color: black;
-	background: white;
-	border: 1px solid grey;
-	height: 20px;
+   <string notr="true">QWidget#MainWindow {
+margin: 0;
+}
+
+QPushButton {
+height: 17px;
+}
+
+QLineEdit {
+height: 17px;
+}
+
+QPushButton#DataFolder {
+width: 100px;
 }</string>
   </property>
-  <property name="animated">
-   <bool>false</bool>
-  </property>
-  <property name="dockNestingEnabled">
-   <bool>false</bool>
-  </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0">
-    <item row="1" column="0" colspan="2">
-     <widget class="QProgressBar" name="progressBar">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="text">
+       <string>L Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QCheckBox" name="firstReplace">
+      <property name="text">
+       <string>Замена 1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="6">
+     <widget class="QPushButton" name="executeButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Выполнить</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QPushButton" name="DataFolder">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Папка &quot;DATA&quot;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QCheckBox" name="secondReplace">
+      <property name="text">
+       <string>Замена 2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" colspan="5">
+     <widget class="QLineEdit" name="LData">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="7">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="styleSheet">
+       <string notr="true">height: 25px;</string>
       </property>
       <property name="value">
-       <number>24</number>
+       <number>0</number>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="1" rowspan="3">
-     <widget class="QPushButton" name="pushButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
-      <property name="styleSheet">
-       <string notr="true"/>
+      <property name="textVisible">
+       <bool>true</bool>
       </property>
-      <property name="text">
-       <string>Click Me</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QCheckBox" name="checkBox">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="autoFillBackground">
+      <property name="invertedAppearance">
        <bool>false</bool>
       </property>
-      <property name="text">
-       <string>Option</string>
+      <property name="textDirection">
+       <enum>QProgressBar::TopToBottom</enum>
       </property>
      </widget>
+    </item>
+    <item row="7" column="6">
+     <widget class="QCheckBox" name="DeltaBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Дельта</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="5">
+     <widget class="QPushButton" name="cancelButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Отменить</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="6">
+     <widget class="QCheckBox" name="statisticsBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Статистика</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2" colspan="5">
+     <widget class="QLineEdit" name="DataFolderPath">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>

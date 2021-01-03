@@ -3,8 +3,6 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
-#include <QCheckBox>
-#include <QProgressBar>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,8 +14,8 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    void onButtonClick();
     ~MainWindow();
+    void onButtonClick();
 
 private:
     Ui::MainWindow *ui;
