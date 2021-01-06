@@ -77,17 +77,11 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtGui/qtransform.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qwindowdefs.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/QCheckBox \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/QMainWindow \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/QMessageBox \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/QProgressBar \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qabstractbutton.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qcheckbox.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qdialog.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qframe.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qmainwindow.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qmessagebox.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qprogressbar.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qsizepolicy.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qtabwidget.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qtwidgets-config.h \

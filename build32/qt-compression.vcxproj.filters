@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\build32\qt-compression_autogen\mocs_compilation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\BinaryData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -12,6 +15,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\BinaryData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
