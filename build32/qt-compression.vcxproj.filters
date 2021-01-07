@@ -7,6 +7,12 @@
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\BinaryData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\DeltaDecorator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -16,6 +22,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\BinaryData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\DeltaDecorator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h">

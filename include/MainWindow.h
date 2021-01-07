@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
-#include <BinaryData.h>
+#include <DeltaDecorator.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
