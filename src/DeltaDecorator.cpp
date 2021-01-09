@@ -35,7 +35,7 @@ void DeltaDecorator::Execute(void)
 			pBits = qBits;
 			_data->clear();
 			_data->append(_temp->mid(0, _temp->count()));
-			// delta_times = i + 1;
+			SClass::GetInstance()->SetDelta(i + 1);
 		}
 	}
 	// END OF DELTA //

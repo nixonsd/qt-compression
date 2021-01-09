@@ -16,6 +16,9 @@
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\SClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,6 +34,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\SClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\resource.h">

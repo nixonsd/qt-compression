@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <SClass.h>
+#include <BinaryData.h>
 #include <DeltaDecorator.h>
 
 QT_BEGIN_NAMESPACE

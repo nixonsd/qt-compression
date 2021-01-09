@@ -3,6 +3,7 @@
 
 #include <QVector>
 #include <QtMath>
+#include <SClass.h>
 #include <BinaryData.h>
 
 class Component
@@ -22,10 +23,12 @@ protected:
     // Vector of the data //
     QVector<int>* _data;
     BinaryData* _binaryData;
+    SClass* _sInfo;
 
 public:
-    DataComponent() : DataComponent(nullptr) {};
+    DataComponent(void) : DataComponent(nullptr) {};
     DataComponent(QVector<int>* Vector);
+    ~DataComponent(void);
     /**
       * Return the data array
       * @param void

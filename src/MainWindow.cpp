@@ -13,15 +13,15 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::onExecuteButtonClick()
 {
+    SClass* _sInfo = SClass::GetInstance();
     QVector<int>* _s_vector = new QVector<int>();
 
-    /*
     for (int i = 0; i < 1000000; i++)
     {
         _s_vector->append(rand());
     }
-    */
 
+    /*
     _s_vector->append(113190);
     _s_vector->append(372147);
     _s_vector->append(691427);
@@ -35,16 +35,21 @@ void MainWindow::onExecuteButtonClick()
     _s_vector->append(689008);
     _s_vector->append(447120);
     _s_vector->append(213477);
+    */
 
     Component* _data = new DataComponent(_s_vector);
-    DeltaDecorator* _delta = new DeltaDecorator(_data);
-    _delta->Execute();
 
-    QMessageBox msgB;
-    msgB.setText(QString::fromWCharArray(L"Число: ") + QString::number(_delta->GetData()->at(0)));
-    msgB.exec();
+    if (ui->DeltaBox->checkState())
+    {
+        DeltaDecorator* _delta = new DeltaDecorator(_data);
+        _delta->Execute();
+        delete _delta;
+    }
 
-    delete _delta;
+    QMessageBox messageBox;
+    messageBox.setText("Delta: " + QString::number(_sInfo->GetDelta()));
+    messageBox.exec();
+
     delete _data;
     delete _s_vector;
 }
