@@ -3,6 +3,7 @@
 DataComponent::DataComponent(QVector<int>* Vector)
 {
     _data = Vector;
+    _binaryData = BinaryData::GetInstance();
 }
 
 QVector<int>* DataComponent::GetData(void)

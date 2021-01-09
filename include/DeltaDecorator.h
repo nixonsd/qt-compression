@@ -6,20 +6,27 @@
 class DeltaDecorator : public Decorator
 {
 public:
-	DeltaDecorator(Component * component) : Decorator(component)
-	{
+	DeltaDecorator(Component * component) : Decorator(component) { }
+	~DeltaDecorator(void);
 
-	}
-
-	QVector<int>* GetData(void) override
-	{
-		return component_->GetData();
-	}
-
-	void SetData(QVector<int>* l) override
-	{
-		return;
-	}
+	/**
+	  * Return the data array
+	  * @param void
+	  * @return Vector of the data
+	  */
+	QVector<int>* GetData(void) override;
+	/**
+	  * Set the data array
+	  * @param Vector of the data
+	  * @return void
+	  */
+	void SetData(QVector<int>* Vector) override;
+	/**
+	  * Execute the transformation
+	  * @param void
+	  * @return void
+	  */
+	void Execute(void) override;
 };
 
 #endif

@@ -2,6 +2,8 @@
 #define COMPONENT_H
 
 #include <QVector>
+#include <QtMath>
+#include <BinaryData.h>
 
 class Component
 {
@@ -19,9 +21,10 @@ class DataComponent : public Component
 protected:
     // Vector of the data //
     QVector<int>* _data;
+    BinaryData* _binaryData;
 
 public:
-    DataComponent() {};
+    DataComponent() : DataComponent(nullptr) {};
     DataComponent(QVector<int>* Vector);
     /**
       * Return the data array
@@ -52,7 +55,7 @@ public:
       * @param void
       * @return void
       */
-    virtual void Execute(void) { return; };
+    virtual void Execute(void) = 0;
 };
 
 #endif // COMPONENT_H

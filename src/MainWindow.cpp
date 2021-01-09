@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->DeltaBox->setChecked(true);
     QObject::connect(ui->executeButton, &QPushButton::clicked,
         this, &MainWindow::onExecuteButtonClick);
 }
@@ -13,6 +14,14 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::onExecuteButtonClick()
 {
     QVector<int>* _s_vector = new QVector<int>();
+
+    /*
+    for (int i = 0; i < 1000000; i++)
+    {
+        _s_vector->append(rand());
+    }
+    */
+
     _s_vector->append(113190);
     _s_vector->append(372147);
     _s_vector->append(691427);
@@ -29,9 +38,10 @@ void MainWindow::onExecuteButtonClick()
 
     Component* _data = new DataComponent(_s_vector);
     DeltaDecorator* _delta = new DeltaDecorator(_data);
+    _delta->Execute();
 
     QMessageBox msgB;
-    msgB.setText(QString::fromWCharArray(L"Число: ") + QString::number(_delta->GetData()->at(2)));
+    msgB.setText(QString::fromWCharArray(L"Число: ") + QString::number(_delta->GetData()->at(0)));
     msgB.exec();
 
     delete _delta;
