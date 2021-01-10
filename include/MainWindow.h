@@ -6,6 +6,7 @@
 #include <SClass.h>
 #include <BinaryData.h>
 #include <DeltaDecorator.h>
+#include <ctime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

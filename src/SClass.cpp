@@ -5,7 +5,7 @@ SClass* SClass::sClass_ = nullptr;
 
 void SClass::SetDelta(unsigned short Delta)
 {
-	if (Delta < 8 && Delta > 0)
+	if (Delta < 8 && Delta >= 0)
 		_delta = Delta;
 }
 

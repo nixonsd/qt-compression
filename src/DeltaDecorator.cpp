@@ -18,6 +18,9 @@ void DeltaDecorator::Execute(void)
 		pBits += BinaryData::HiBit(qAbs(*itr));
 	}
 
+	// SET DELTA TO ZERO //
+	SClass::GetInstance()->SetDelta(0);
+
 	// DELTA //
 	for (int i = 0; i < 7; i++)
 	{
