@@ -13,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::onExecuteButtonClick()
 {
+    // TODO:
+    // MAKE OWN SClass FOR EACH DATA COMPONENT
+
     srand(time(nullptr));
     SClass* _sInfo = SClass::GetInstance();
     QVector<int>* _s_vector = new QVector<int>();

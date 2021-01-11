@@ -4,8 +4,8 @@
 #include <Component.h>
 
 /**
-  * The Delta class makes a delta transformation
-  * Subtracts one number from another
+  * The SubtractionDecorator class makes a subtraction transformation
+  * Subtracts the minimum number from another
   * Transformation starts from the end
   */
 class SubtractionDecorator : public Decorator
@@ -13,13 +13,15 @@ class SubtractionDecorator : public Decorator
 public:
 	SubtractionDecorator(Component* component);
 	~SubtractionDecorator(void);
-
 	/**
 	  * Execute the transformation
 	  * @param void
 	  * @return void
 	  */
 	void Execute(void) override;
+
+private:
+	QVector<int>* _temp = nullptr;
 };
 
 #endif
