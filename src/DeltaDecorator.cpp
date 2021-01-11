@@ -58,13 +58,3 @@ DeltaDecorator::~DeltaDecorator(void)
 {
 	component_ = nullptr;
 }
-
-QVector<int>* DeltaDecorator::GetData(void)
-{
-	return component_->GetData();
-}
-
-void DeltaDecorator::SetData(QVector<int>* Vector)
-{
-	component_->SetData(Vector);
-}

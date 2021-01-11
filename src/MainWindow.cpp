@@ -17,13 +17,12 @@ void MainWindow::onExecuteButtonClick()
     SClass* _sInfo = SClass::GetInstance();
     QVector<int>* _s_vector = new QVector<int>();
 
-    /*
     for (int i = 0; i < 1000000; i++)
     {
         _s_vector->append(rand() % 250);
     }
-    */
 
+    /*
     _s_vector->append(113190);
     _s_vector->append(372147);
     _s_vector->append(691427);
@@ -37,6 +36,7 @@ void MainWindow::onExecuteButtonClick()
     _s_vector->append(689008);
     _s_vector->append(447120);
     _s_vector->append(213477);
+    */
 
     try {
         Component* _data = new DataComponent(_s_vector);
@@ -51,7 +51,7 @@ void MainWindow::onExecuteButtonClick()
         QMessageBox messageBox;
         messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_sInfo->GetDelta()));
 
-        // SubtractDecorator
+        // SubtractionDecorator
 
         delete _data;
     }

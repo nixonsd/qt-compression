@@ -1,5 +1,5 @@
-#ifndef DELTA_DECORATOR_H
-#define DELTA_DECORATOR_H
+#ifndef SUBTRACTION_DECORATOR_H
+#define SUBTRACTION_DECORATOR_H
 
 #include <Component.h>
 
@@ -8,11 +8,12 @@
   * Subtracts one number from another
   * Transformation starts from the end
   */
-class DeltaDecorator : public Decorator
+class SubtractionDecorator : public Decorator
 {
 public:
-	DeltaDecorator(Component* component);
-	~DeltaDecorator(void);
+	SubtractionDecorator(Component* component);
+	~SubtractionDecorator(void);
+
 	/**
 	  * Execute the transformation
 	  * @param void

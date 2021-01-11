@@ -26,3 +26,13 @@ void DataComponent::SetData(QVector<int>* Vector)
 {
     _data = Vector;
 }
+
+QVector<int>* Decorator::GetData(void)
+{
+    return component_->GetData();
+}
+
+void Decorator::SetData(QVector<int>* Vector)
+{
+    component_->SetData(Vector);
+}

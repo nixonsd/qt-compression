@@ -55,6 +55,18 @@ protected:
 public:
     Decorator(Component* component) : component_(component) { }
     /**
+      * Return the data array
+      * @param void
+      * @return Vector of the data
+      */
+    virtual QVector<int>* GetData(void);
+    /**
+      * Set the data array
+      * @param Vector of the data
+      * @return void
+      */
+    virtual void SetData(QVector<int>* Vector);
+    /**
       * Execute the transformation
       * @param void
       * @return void
