@@ -13,11 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::onExecuteButtonClick()
 {
-    // TODO:
-    // MAKE OWN SClass FOR EACH DATA COMPONENT
 
     srand(time(nullptr));
-    SClass* _sInfo = SClass::GetInstance();
     QVector<int>* _s_vector = new QVector<int>();
 
     for (int i = 0; i < 1000000; i++)
@@ -52,7 +49,7 @@ void MainWindow::onExecuteButtonClick()
         }
 
         QMessageBox messageBox;
-        messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_sInfo->GetDelta()));
+        messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_data->_sInfo->GetDelta()));
 
         // SubtractionDecorator
 

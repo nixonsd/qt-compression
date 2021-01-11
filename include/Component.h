@@ -13,6 +13,9 @@ public:
     virtual ~Component() {}
     virtual QVector<int>* GetData(void) = 0;
     virtual void SetData(QVector<int>*) = 0;
+
+public:
+    SClass* _sInfo = nullptr;
 };
 
 class DataComponent : public Component
@@ -24,7 +27,6 @@ protected:
     // Vector of the data //
     QVector<int>* _data;
     BinaryData* _binaryData;
-    SClass* _sInfo;
 
 public:
     DataComponent(void) : DataComponent(nullptr) {};

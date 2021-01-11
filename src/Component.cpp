@@ -8,13 +8,14 @@ DataComponent::DataComponent(QVector<int>* Vector)
 
     _data = Vector;
     _binaryData = BinaryData::GetInstance();
-    _sInfo = SClass::GetInstance();
+    _sInfo = new SClass();
 }
 
 DataComponent::~DataComponent(void)
 {
     _binaryData = nullptr;
-    _sInfo = nullptr;
+    _data = nullptr;
+    delete _sInfo;
 }
 
 QVector<int>* DataComponent::GetData(void)

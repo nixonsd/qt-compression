@@ -19,7 +19,7 @@ void DeltaDecorator::Execute(void)
 	}
 
 	// SET DELTA TO ZERO //
-	SClass::GetInstance()->SetDelta(0);
+	component_->_sInfo->SetDelta(0);
 
 	// DELTA //
 	for (int i = 0; i < 7; i++)
@@ -38,7 +38,7 @@ void DeltaDecorator::Execute(void)
 			pBits = qBits;
 			_data->clear();
 			_data->append(_temp->mid(0, _temp->count()));
-			SClass::GetInstance()->SetDelta(i + 1);
+			component_->_sInfo->SetDelta(i + 1);
 		}
 	}
 	// END OF DELTA //
