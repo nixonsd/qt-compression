@@ -18,7 +18,7 @@ void MainWindow::onExecuteButtonClick()
     QVector<int>* _s_vector = new QVector<int>();
 
     /*
-    for (int i = 0; i < 13; i++)
+    for (int i = 0; i < 1000000; i++)
     {
         _s_vector->append(rand() % 250);
     }
@@ -38,20 +38,29 @@ void MainWindow::onExecuteButtonClick()
     _s_vector->append(447120);
     _s_vector->append(213477);
 
-    Component* _data = new DataComponent(_s_vector);
+    try {
+        Component* _data = new DataComponent(_s_vector);
 
-    if (ui->DeltaBox->checkState())
+        if (ui->DeltaBox->checkState())
+        {
+            DeltaDecorator* _delta = new DeltaDecorator(_data);
+            _delta->Execute();
+            delete _delta;
+        }
+
+        QMessageBox messageBox;
+        messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_sInfo->GetDelta()));
+
+        // SubtractDecorator
+
+        delete _data;
+    }
+    catch (std::exception e)
     {
-        DeltaDecorator* _delta = new DeltaDecorator(_data);
-        _delta->Execute();
-        delete _delta;
+        QMessageBox messageBox;
+        messageBox.critical(0, "Error", e.what());
     }
 
-    QMessageBox messageBox;
-    messageBox.setText("Delta: " + QString::number(_sInfo->GetDelta()));
-    messageBox.exec();
-
-    delete _data;
     delete _s_vector;
 }
 

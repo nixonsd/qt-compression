@@ -2,6 +2,10 @@
 
 DataComponent::DataComponent(QVector<int>* Vector)
 {
+    // EXCEPTION //
+    if (Vector == nullptr)
+        throw std::invalid_argument("Invalid argument error. The data reference consists of a null pointer.");
+
     _data = Vector;
     _binaryData = BinaryData::GetInstance();
     _sInfo = SClass::GetInstance();

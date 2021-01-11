@@ -46,6 +46,14 @@ void DeltaDecorator::Execute(void)
 	delete _temp;
 }
 
+DeltaDecorator::DeltaDecorator(Component* component) : Decorator(component)
+{
+	// EXCEPTION //
+	if (component == nullptr)
+		throw std::invalid_argument("Invalid argument error. The data in the delta decorator component consists of a null pointer.");
+
+}
+
 DeltaDecorator::~DeltaDecorator(void)
 {
 	component_ = nullptr;

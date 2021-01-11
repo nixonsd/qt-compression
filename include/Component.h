@@ -4,6 +4,7 @@
 #include <QVector>
 #include <QtMath>
 #include <SClass.h>
+#include <exception>
 #include <BinaryData.h>
 
 class Component

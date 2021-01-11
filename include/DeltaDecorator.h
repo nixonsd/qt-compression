@@ -3,10 +3,15 @@
 
 #include <Component.h>
 
+/**
+  * The Delta class makes a delta transformation
+  * Subtracts one number from another
+  * Transformation starts from the end
+  */
 class DeltaDecorator : public Decorator
 {
 public:
-	DeltaDecorator(Component * component) : Decorator(component) { }
+	DeltaDecorator(Component* component);
 	~DeltaDecorator(void);
 
 	/**
