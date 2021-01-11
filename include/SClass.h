@@ -1,6 +1,9 @@
 #ifndef S_CLASS_H
 #define S_CLASS_H
 
+/**
+  * The SClass is responsible for storing metadata
+  */
 class SClass
 {
 public:
