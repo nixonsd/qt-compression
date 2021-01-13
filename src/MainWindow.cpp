@@ -13,16 +13,22 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::onExecuteButtonClick()
 {
+    // TODO:
+    // SubtractionDecorator:
+    // Add Statistics to the execute function
+    // Return previous array by special function (for defining the sign)
+    // OR Make the function of the return previous array as common
 
     srand(time(nullptr));
     QVector<int>* _s_vector = new QVector<int>();
 
+    /*
     for (int i = 0; i < 1000000; i++)
     {
         _s_vector->append(rand() % 250);
     }
+    */
 
-    /*
     _s_vector->append(113190);
     _s_vector->append(372147);
     _s_vector->append(691427);
@@ -36,7 +42,6 @@ void MainWindow::onExecuteButtonClick()
     _s_vector->append(689008);
     _s_vector->append(447120);
     _s_vector->append(213477);
-    */
 
     try {
         Component* _data = new DataComponent(_s_vector);
@@ -48,11 +53,14 @@ void MainWindow::onExecuteButtonClick()
             delete _delta;
         }
 
+        SubtractionDecorator* _subtract = new SubtractionDecorator(_data);
+        _subtract->Execute();
+
         QMessageBox messageBox;
-        messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_data->_sInfo->GetDelta()));
+        messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_data->_sInfo->GetDelta())
+        + ".\n" + "The number is: " + QString::number(_data->GetData()->at(5)));
 
-        // SubtractionDecorator
-
+        delete _subtract;
         delete _data;
     }
     catch (std::exception e)

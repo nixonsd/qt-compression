@@ -17,7 +17,7 @@ void SubtractionDecorator::Execute(void)
 	}
 
 	// MINIMAL NUMBER //
-	int* mNum = std::min_element(_data->begin(), _data->end());
+	int mNum = *std::min_element(_data->begin(), _data->end());
 
 	if (mNum != 0)
 	{
@@ -25,7 +25,7 @@ void SubtractionDecorator::Execute(void)
 		// SUBTRACTS MINIMAL NUMBER OUT EACH ELEMENT OF THE DATA ARRAY //
 		for (auto itr = _data->begin(); itr != _data->end(); ++itr)
 		{
-			*itr = *itr - (*mNum - 1);
+			*itr = *itr - (mNum - 1);
 		}
 	}
 	else
@@ -37,6 +37,11 @@ void SubtractionDecorator::Execute(void)
 			*itr = *itr + 1;
 		}
 	}
+}
+
+QVector<int>* SubtractionDecorator::GetPreviousData(void)
+{
+	return _temp;
 }
 
 SubtractionDecorator::SubtractionDecorator(Component* component) : Decorator(component)

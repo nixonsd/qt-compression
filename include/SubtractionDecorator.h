@@ -19,7 +19,12 @@ public:
 	  * @return void
 	  */
 	void Execute(void) override;
-
+	/**
+	  * Execute the transformation
+	  * @param void
+	  * @return void
+	  */
+	QVector<int>* GetPreviousData(void);
 private:
 	QVector<int>* _temp = nullptr;
 };
