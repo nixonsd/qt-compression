@@ -452,6 +452,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\MainWindow.h" />
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\SClass.h" />
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\SubtractionDecorator.h" />
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\ZeroClass.h" />
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\resource.h" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\BinaryData.cpp" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\Component.cpp" />
@@ -459,6 +460,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\MainWindow.cpp" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\SClass.cpp" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\SubtractionDecorator.cpp" />
+    <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\ZeroClass.cpp" />
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\main.cpp" />
     <ResourceCompile Include="C:\Users\banda\Documents\Работа\qt-compression\resources\qt-compression.rc" />
   </ItemGroup>

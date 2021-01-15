@@ -56,6 +56,9 @@ void MainWindow::onExecuteButtonClick()
         SubtractionDecorator* _subtract = new SubtractionDecorator(_data);
         _subtract->Execute();
 
+        ZeroClass* _zeros = new ZeroClass(_data);
+        QMap<int, QString>* _zeroDependencies = _zeros->GetBytesMap();
+
         QMessageBox messageBox;
         messageBox.information(0, "Delta", "Delta is equal to " + QString::number(_data->_sInfo->GetDelta())
         + ".\n" + "The number is: " + QString::number(_data->GetData()->at(5)));

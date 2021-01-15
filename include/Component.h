@@ -2,9 +2,11 @@
 #define COMPONENT_H
 
 #include <QVector>
+#include <QMap>
+#include <QMultiMap>
 #include <QtMath>
-#include <SClass.h>
 #include <exception>
+#include <SClass.h>
 #include <BinaryData.h>
 
 class Component

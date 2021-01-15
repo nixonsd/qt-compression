@@ -22,6 +22,9 @@
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\SubtractionDecorator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\ZeroClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\banda\Documents\Работа\qt-compression\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,6 +46,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\SubtractionDecorator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\ZeroClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\banda\Documents\Работа\qt-compression\include\resource.h">

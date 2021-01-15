@@ -20,9 +20,9 @@ public:
 	  */
 	void Execute(void) override;
 	/**
-	  * Execute the transformation
+	  * Returns the previous data array
 	  * @param void
-	  * @return void
+	  * @return Previous data array
 	  */
 	QVector<int>* GetPreviousData(void);
 private:

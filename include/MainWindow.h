@@ -6,6 +6,7 @@
 #include <SClass.h>
 #include <BinaryData.h>
 #include <DeltaDecorator.h>
+#include <ZeroClass.h>
 #include <SubtractionDecorator.h>
 #include <ctime> // delete
 
