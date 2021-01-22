@@ -11,6 +11,10 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtCore/qcontainerfwd.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qcontainertools_impl.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qdatastream.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qdir.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qfile.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qfiledevice.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qfileinfo.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qflags.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qglobal.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qglobalstatic.h \
@@ -51,6 +55,7 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtCore/qsystemdetection.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qtcore-config.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qtypeinfo.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qurl.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qvarlengtharray.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qvector.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qversiontagging.h \
@@ -77,9 +82,11 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtGui/qtransform.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qwindowdefs.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/5.15.0/msvc2019/include/QtWidgets/QFileDialog \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/QMainWindow \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/QMessageBox \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qdialog.h \
+  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qfiledialog.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qmainwindow.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qmessagebox.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qsizepolicy.h \

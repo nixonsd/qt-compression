@@ -1,4 +1,7 @@
-C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/include_Release/6YEA5652QU/moc_MainWindow.cpp: C:/Users/banda/Documents/??????/qt-compression/include/MainWindow.h \
+C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/include_Debug/6YEA5652QU/moc_FileHandler.cpp: C:/Users/banda/Documents/??????/qt-compression/include/FileHandler.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/QFile \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/QTextStream \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/QThread \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qalgorithms.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qarraydata.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qatomic.h \
@@ -11,10 +14,10 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtCore/qcontainerfwd.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qcontainertools_impl.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qdatastream.h \
-  C:/Qt/5.15.0/msvc2019/include/QtCore/qdir.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qdeadlinetimer.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qelapsedtimer.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qfile.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qfiledevice.h \
-  C:/Qt/5.15.0/msvc2019/include/QtCore/qfileinfo.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qflags.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qglobal.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qglobalstatic.h \
@@ -24,7 +27,9 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtCore/qiterator.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qline.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qlist.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qlocale.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qlogging.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qmap.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qmargins.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qmetatype.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qmutex.h \
@@ -54,8 +59,10 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtCore/qsysinfo.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qsystemdetection.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qtcore-config.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qtextstream.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qthread.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qtypeinfo.h \
-  C:/Qt/5.15.0/msvc2019/include/QtCore/qurl.h \
+  C:/Qt/5.15.0/msvc2019/include/QtCore/qvariant.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qvarlengtharray.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qvector.h \
   C:/Qt/5.15.0/msvc2019/include/QtCore/qversiontagging.h \
@@ -65,7 +72,6 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtGui/qfont.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qfontinfo.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qfontmetrics.h \
-  C:/Qt/5.15.0/msvc2019/include/QtGui/qicon.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qimage.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qkeysequence.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qmatrix.h \
@@ -82,15 +88,13 @@ C:/Users/banda/Documents/??????/qt-compression/build32/qt-compression_autogen/in
   C:/Qt/5.15.0/msvc2019/include/QtGui/qtransform.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qwindowdefs.h \
   C:/Qt/5.15.0/msvc2019/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/QFileDialog \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/QMainWindow \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/QMessageBox \
+  C:/Qt/5.15.0/msvc2019/include/QtWidgets/QProgressBar \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qdialog.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qfiledialog.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qmainwindow.h \
+  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qframe.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qmessagebox.h \
+  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qprogressbar.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/5.15.0/msvc2019/include/QtWidgets/qtabwidget.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/5.15.0/msvc2019/include/QtWidgets/qwidget.h

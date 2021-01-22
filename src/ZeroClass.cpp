@@ -74,4 +74,5 @@ ZeroClass::ZeroClass(Component* component) : Decorator(component)
 ZeroClass::~ZeroClass(void)
 {
 	component_ = nullptr;
+	delete _temp;
 }
